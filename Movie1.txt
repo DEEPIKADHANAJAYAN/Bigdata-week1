@@ -1,0 +1,58 @@
+import.java.util.*;
+class MovieDetail
+{
+int MovieID;
+String MovieName;
+String MovieActor;
+String MovieDirector;
+String MovieRDate;
+int MovieRating;
+int rcount=0;
+int dcount=0;
+int acount=0;
+
+void get()
+{
+Scanner sc=new Scanner(System.in);
+MovieID=sc.nextint();
+MovieName=sc.next();
+MovieActor=sc.next();
+MovieRDate=sc.next();
+MovieRating=sc.nextint();
+ }
+void getcount()
+{
+if(MovieRating >5)
+{
+rcount++;
+}
+if(MovieDirector.equals("KranJohar"))
+{
+dcount++;
+}
+if(MocieActor.equals("AmitabhBachhan"))
+{
+acount++;
+}
+}
+}
+public class test{
+public static void main(String [] arg)
+{
+MovieDetail m=new MovieDetail;
+int c=0;
+int i=0;
+while(i<5)
+{
+m.get();
+m.getcount();
+i++;
+}
+System.out.println("the count of movies with above 5 rating"+m.rcount);
+
+System.out.println("the count of movies with actor amitabh"+m.acount);
+
+System.out.println("the count of movies with director karajoahar"+m.dcount);
+}
+}
+

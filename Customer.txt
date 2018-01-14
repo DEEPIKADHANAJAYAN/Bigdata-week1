@@ -1,0 +1,34 @@
+import.java.util.*;
+public class Customer
+{
+long Highamt=0;
+int counter=0;
+String cname;
+int cid;
+double price;
+double quantity;
+ void accept()
+{
+Scanner sc=new Scanner(System.in);
+cname=sc.next();
+cid=sc.nextint();
+price=sc.nextdouble();
+quantity=sc.nextdouble();
+
+}
+
+public static void main(String []a)
+{
+Customer c=new Customer();
+
+double total = price*quantity;
+if(c.Highamt < total)
+{
+ c.Highamt = total;
+}
+System.out.println("Total price =" +total);
+c++;
+}
+System.our.println("Highest transaction " +c.Highamt)
+}
+}

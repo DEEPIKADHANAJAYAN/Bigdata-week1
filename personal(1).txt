@@ -1,0 +1,15 @@
+import.java.util.*;
+public class Personal
+{
+String name;
+String city;
+public static void main(String [] a)
+{
+Personal p =new Personal();
+Scanner sc=new Scanner (System.in);
+p.name =sc.next();
+p.city=sc.next();
+System.out.println("name:"+ p.name);
+System.out.println("The city they are from :"+p.city);
+}
+}

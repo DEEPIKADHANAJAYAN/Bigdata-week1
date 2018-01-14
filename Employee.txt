@@ -1,0 +1,49 @@
+import.java.util.*;
+public class Employee
+{
+long Highsal=1;
+
+String ename,hname;
+int eid;
+double isalary,tsalary;
+
+ void accept()
+{
+Scanner sc=new Scanner(System.in);
+ename=sc.next();
+eid=sc.nextint();
+isalary=sc.nextdouble();
+tsalary = calculate(isalary);
+
+if(Highsal<tsalary)
+{
+Highsal=tsalary;
+Hname=emane;
+}
+}
+
+double calculate(double isalary)
+{
+for(int i=0;i<10:i++)
+{
+isalary=isalary;
+tsalary+=isalary*(10/100);
+return tsalary;
+}
+
+public static void main(String []a)
+{
+Employee e=new Employee();
+int i=0;
+while(i<10)
+{
+e.accept();
+System.out.println("Salary after 10 years"+e.tsalary);
+i++;
+}
+System.out.println("The highest salary after 10 years"+e.Highsal+"paid to "+e.Hname);
+
+}
+
+}
+ 

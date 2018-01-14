@@ -1,0 +1,87 @@
+import java.util.*;
+
+class Empanalysis {
+    int eid,eage,salary,cmarried=0,hhr=0,hmarketing=0,hfinance=0,hoperation=0,chr=0,cmarketing=0,
+            cfinance=0,coperation=0,cretire=0,cfi=0;
+    String ename,ecity,ecountry,dept,mstatus;
+    char gender;
+    
+void male_married(){
+if(gender == 'm'){
+            if(mstatus.equals("yes")){
+            cmarried++;
+            }
+}
+}
+void high_sal_totcount(){
+if(dept.equals("HR")){
+    chr++;
+    if(hhr < salary){ hhr = salary; }
+}
+else if(dept.equals("Marketing")){
+    cmarketing++;
+    if(hmarketing < salary){ hmarketing = salary; }
+}
+else if(dept.equals("Finance")){
+    cfinance++;
+    if(hfinance < salary){ hfinance = salary; }
+}
+else{
+    coperation++;
+    if(hoperation < salary){ hoperation = salary; }
+}
+}
+void retire(){
+if(eage == 59){
+cretire++;
+}
+}
+void female_india(){
+if(gender == 'f' && ecity.equals("India")){ cfi++; }
+}
+}
+public class Empdetail{
+public static void main(String arg[]){
+Scanner in = new Scanner(System.in);
+Empanalysis obj=new Empanalysis();
+
+
+for(int i=0;i<10;i++){
+
+System.out.println("Enter Employe Details: ID");
+obj.eid = in.nextInt();
+System.out.println("Enter Employe Details: name");
+obj.ename= in.next();
+System.out.println("Enter Employe Details: city");
+obj.ecity= in.next();
+System.out.println("Enter Employe Details: country");
+obj.ecountry= in.next();
+System.out.println("Enter Employe Details: department");
+obj.dept= in.next();
+System.out.println("Enter Employe Details: age");
+obj.eage= in.nextInt();
+System.out.println("Enter Employe Details:  maritalstatus(yes/no)");
+obj.mstatus= in.next();
+System.out.println("Enter Employe Details: gender(f/m)");
+obj.gender= in.next().charAt(0);
+System.out.println("Enter Employe Details: salary");
+obj.salary= in.nextInt();
+
+obj.male_married();
+obj.high_sal_totcount();
+obj.retire();
+obj.female_india();
+}
+
+System.out.println("count of male emp who are married.." + obj.cmarried +
+"\n total count of employee in each dept..\n" + "HR---"+obj.chr+"\nMarketing---"+obj.cmarketing+
+        "\nFinance---"+obj.cfinance+"\noperation---"+obj.coperation+
+"\n highest sal of each dept...\n" + "HR---"+obj.hhr+"\nMarketing---"+obj.hmarketing+
+        "\nFinance---"+obj.hfinance+"\noperation---"+obj.hoperation +
+"\n count of emp going to retire after 1 yr(age >=60)" + obj.cretire + 
+"\n female emp belong to india" + obj.cfi );
+
+}
+
+
+}

@@ -1,0 +1,84 @@
+import.java.util.*;
+class CustomerDetail
+{
+int ID;
+String name;
+int age;
+String gender;
+String city;
+String country
+String hobby;
+String phone;
+int mcount=0;
+int fcount=0;
+int scount=0;
+int hcount=0;
+int ccount=0;
+int pcount=0;
+
+void get()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the details");
+ID=sc.nextint();
+name=sc.next();
+age=sc.nextint();
+city=sc.next();
+country=sc.next();
+hobby=sc.next();
+phone=sc.next();
+ }
+void getcount()
+{
+if(gender.equals("male"))
+{
+mcount++;
+}
+else 
+{
+fcount++;
+}
+if(age>60)
+{
+scount++;
+}
+if(hobby.equals("travelling"))
+{
+hcount++;
+}
+if(country.equals("india") or country.equals("usa"))
+{
+ccount++;
+}
+if(phone==NULL)
+{
+PCOUNT++;
+}
+}
+}
+public class test{
+public static void main(String [] arg)
+{
+CustomerDetail c=new CustomerDetail;
+int c=0;
+int i=0;
+while(i<5)
+{
+c.get();
+c.getcount();
+i++;
+}
+System.out.println("the count of male customer"+c.mcount);
+
+System.out.println("the count of female customer "+c.fcount);
+
+System.out.println("the count of senior citizen"+c.scount);
+System.out.println("the count of customer whose hobby is travelling"+c.hcount);
+System.out.println("the count of customer who belongs to india or usa"+c.ccount);
+System.out.println("the count of customer who doesn't have phone number"+c.pcount);
+
+
+}
+
+}
+
